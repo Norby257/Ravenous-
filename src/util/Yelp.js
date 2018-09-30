@@ -1,6 +1,7 @@
 const apiKey = "8mICshm4do4I18WocxtgjtnV1NjkS_8UiLVbBMXnLdHK5HOYDBf-OMQVmdHdSkm-84GaPhsrfGPV2abUF8TaIYCkP8i8URWVa7np2SDDJmXw8_5j8PQEk2o6NzqkW3Yx"
 
-var Yelp = {
+import React, {Component} from 'react'
+class Yelp extends React.Component() {
     constructor(props) {
         super(props);
 
@@ -9,7 +10,7 @@ var Yelp = {
 
         }
         this.searchYelp.bind(this)
-    },
+    }
      search: function(term, location, sortBy) {
         return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}
         `, headers = {
